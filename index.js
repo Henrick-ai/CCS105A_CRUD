@@ -14,6 +14,8 @@ const logger = (req, res, next)=>{
     next()
 }
 app.use(logger)
+app.use(cors())
+app.use(express.json()) //use this in fetch API for CRUD
 
 
 //connection to mysql
